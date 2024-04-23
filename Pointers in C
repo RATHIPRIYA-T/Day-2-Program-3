@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h> // for abs function
+
+void update(int *a, int *b) {
+    // Update the value of a to their sum
+    *a = *a + *b;
+    
+    // Update the value of b to their absolute difference
+    *b = abs(*a - 2 * (*b));
+}
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    // Calling the function to update values
+    update(&a, &b);
+
+    // Printing the updated values
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
